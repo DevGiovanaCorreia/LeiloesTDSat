@@ -107,10 +107,11 @@ public class ProdutosDAO {
     }
 
 }
-    
-    public ArrayList<ProdutosDTO> listarProdutosVendidos(){
 
-    String sql = "SELECT * FROM produtos WHERE status = 'Vendido'";
+
+public ArrayList<ProdutosDTO> listarProdutosVendidos(){
+
+    String sql = "SELECT * FROM produtos WHERE status='Vendido'";
 
     conn = new conectaDAO().connectDB();
 
@@ -132,16 +133,18 @@ public class ProdutosDAO {
 
         }
 
-    } catch (SQLException erro){
+    }catch(SQLException erro){
 
         JOptionPane.showMessageDialog(null,"Erro ao listar vendidos");
 
     }
 
     return listagem;
+
+}
 }
     
     
         
-}
+
 
